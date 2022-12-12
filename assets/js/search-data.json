@@ -1,11 +1,22 @@
 {
   
+    
+        "post0": {
+            "title": "Unit 3 Sections 17-18",
+            "content": "3.18: Undecidable Problems . The Jupyter notebook for this lesson can be found here: [link to notebook]. . Purpose: . The purpose of this lesson is to introduce students to the concept of undecidable problems in computer science and to explain why these problems are important. . Key vocabulary: . Decision problem | Decidable problem | Undecidable problem | . Decision Problem . A decision problem is a problem in computer science and mathematics that can be solved by a yes-no answer, also known as a binary answer. In other words, a decision problem is a problem for which there are only two possible outputs:&quot;yes&quot; or &quot;no&quot;. There are two types of decision problems that Collegeboard goes over: . Decidable Problems | Undecidable Problems | . Decidable Problems . A decidable problem is a problem in computer science and mathematics for which an algorithm can be created that can always produce a correct answer or solution. In other words, a decidable problem is a problem for which there exists an algorithm that can be used to determine whether a given input is a valid solution or not. . Examples:Undecidable Problems&gt; An undecidable problem is a problem in computer science and mathematics for which it is impossible to create an algorithm that can always provide a correct answer or solution. This means that it is not possible for an algorithm to always determine whether a given input is a valid solution to an undecidable problem. . Examples:The Halting problem Important things to note: . It is important to emphasize that not all problems that are difficult to solve are undecidable. Some problems may be difficult because they require a lot of time or computing power to solve, but they are still decidable. | It is also important to note that some problems that are undecidable for a computer may be decidable for a human. For example, the halting problem is undecidable for a computer, but a human can often tell whether a program will halt by looking at the code. | . Homework/Hacks: . Use the Jupyter notebook to write an algorithm that solves a decidable problem. | Give an example of an undecidable problem and explain why it is undecidable. |",
+            "url": "https://mmaxwu.github.io/Tri2-GroupFastpages/lessons/2022/12/11/dd-lesson.html",
+            "relUrl": "/lessons/2022/12/11/dd-lesson.html",
+            "date": " • Dec 11, 2022"
+        }
+        
+    
+  
 
   
   
 
   
-      "page1": {
+      ,"page1": {
           "title": "College Board Notes",
           "content": "Notes .",
           "url": "https://mmaxwu.github.io/Tri2-GroupFastpages/CollegeboardNotes/",
