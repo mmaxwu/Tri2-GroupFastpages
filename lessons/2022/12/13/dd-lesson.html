@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      6 min read
     
 </span></p>
 
@@ -100,6 +100,11 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#Do-Now!!!">Do Now!!! </a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#3.17:-Algorithm-Efficiency">3.17: Algorithm Efficiency </a></li>
+<li class="toc-entry toc-h2"><a href="#3.18:-Undecidable-Problems">3.18: Undecidable Problems </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Decision-Problem">Decision Problem </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#Decidable-Problems">Decidable Problems </a></li>
 <li class="toc-entry toc-h2"><a href="#Undecidable-Problems">Undecidable Problems </a>
 <ul>
@@ -107,7 +112,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#The-Halting-Problem">The Halting Problem </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#3.17-Homework:">3.17 Homework: </a></li>
+<li class="toc-entry toc-h2"><a href="#3.17-Homework">3.17 Homework </a></li>
 <li class="toc-entry toc-h2"><a href="#3.18-Homework:">3.18 Homework: </a></li>
 </ul>
 </li>
@@ -140,6 +145,37 @@ window.onload = wrap_img;
 <a class="anchor" href="#3.17:-Algorithm-Efficiency" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.17: Algorithm Efficiency<a class="anchor-link" href="#3.17:-Algorithm-Efficiency"> </a>
 </h2>
 <p>Purpose:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.18:-Undecidable-Problems">
+<a class="anchor" href="#3.18:-Undecidable-Problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.18: Undecidable Problems<a class="anchor-link" href="#3.18:-Undecidable-Problems"> </a>
+</h2>
+<p>Purpose:</p>
+<p>The purpose of this lesson is to introduce students to the concept of undecidable problems in computer science and to explain why these problems are important.</p>
+<p><strong>Key vocabulary</strong>:</p>
+<ul>
+<li>Decision problem</li>
+<li>Decidable problem</li>
+<li>Undecidable problem</li>
+</ul>
+<h3 id="Decision-Problem">
+<a class="anchor" href="#Decision-Problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>Decision Problem<a class="anchor-link" href="#Decision-Problem"> </a>
+</h3>
+<blockquote>
+<p>A decision problem is a problem in computer science and mathematics that can be solved by a yes-no answer, also known as a binary answer. In other words, a decision problem is a problem for which there are only two possible outputs:"yes" or "no".
+There are two types of decision problems that Collegeboard goes over:</p>
+<ul>
+<li>Decidable Problems</li>
+<li>Undecidable Problems</li>
+</ul>
+<p>A <strong><em>__</em></strong> is a problem in computer science and mathematics for which an algorithm can be created that can always produce a correct answer or solution. In other words, a decidable problem is a problem for which there exists an algorithm that can be used to determine whether a given input is a valid solution or not.</p>
+<p>An <strong><em>__</em></strong> problem is a problem in computer science and mathematics for which it is impossible to create an algorithm that can always provide a correct answer or solution. This means that it is not possible for an algorithm to always determine whether a given input is a valid solution to an undecidable problem.</p>
+</blockquote>
 
 </div>
 </div>
@@ -201,6 +237,29 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/jishnus/vscode/Tri2-GroupFastpages/_notebooks/2022-12-dd-lesson.ipynb Cell 7</span> in <span class="ansi-cyan-fg">&lt;cell line: 9&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/jishnus/vscode/Tri2-GroupFastpages/_notebooks/2022-12-dd-lesson.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8'&gt;9&lt;/a&gt;</span> while i == 0:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/jishnus/vscode/Tri2-GroupFastpages/_notebooks/2022-12-dd-lesson.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9'&gt;10&lt;/a&gt;</span>     number += 1
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/jishnus/vscode/Tri2-GroupFastpages/_notebooks/2022-12-dd-lesson.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span>     if integerTest(number) == False:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/jishnus/vscode/Tri2-GroupFastpages/_notebooks/2022-12-dd-lesson.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span>         i +=1
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/jishnus/vscode/Tri2-GroupFastpages/_notebooks/2022-12-dd-lesson.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span>         print("Done")
+
+<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -243,8 +302,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.17-Homework:">
-<a class="anchor" href="#3.17-Homework:" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.17 Homework:<a class="anchor-link" href="#3.17-Homework:"> </a>
+<h2 id="3.17-Homework">
+<a class="anchor" href="#3.17-Homework" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.17 Homework<a class="anchor-link" href="#3.17-Homework"> </a>
 </h2>
 <p>Your homework for Algorithmic Efficiency is pretty simple.</p>
 <ol>
@@ -332,30 +391,6 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Element found after 13 loops in 3 microseconds
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>148</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
