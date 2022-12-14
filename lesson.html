@@ -100,6 +100,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#Do-Now!!!">Do Now!!! </a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#3.17:-Algorithm-Efficiency">3.17: Algorithm Efficiency </a></li>
+<li class="toc-entry toc-h2"><a href="#Traveling-Merchant-Problem-Hacks:">Traveling Merchant Problem Hacks: </a></li>
 <li class="toc-entry toc-h2"><a href="#3.18:-Undecidable-Problems">3.18: Undecidable Problems </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Decision-Problem">Decision Problem </a></li>
@@ -151,6 +152,21 @@ window.onload = wrap_img;
 <a class="anchor" href="#3.17:-Algorithm-Efficiency" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.17: Algorithm Efficiency<a class="anchor-link" href="#3.17:-Algorithm-Efficiency"> </a>
 </h2>
 <p>Purpose:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Traveling-Merchant-Problem-Hacks:">
+<a class="anchor" href="#Traveling-Merchant-Problem-Hacks:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Traveling Merchant Problem Hacks:<a class="anchor-link" href="#Traveling-Merchant-Problem-Hacks:"> </a>
+</h2>
+<p>What did you and your team discuss? (record below)</p>
+<ul>
+<li>An <strong><em>__</em></strong> solution is <strong><strong><strong><strong>__</strong></strong></strong></strong> that produces a solution that isn't necessarily <strong>_</strong> but can be used when normal methods take forever </li>
+</ul>
+<p>Describe the method used to solve the traveling merchant problem. (record below)</p>
 
 </div>
 </div>
@@ -303,7 +319,7 @@ There are two types of decision problems that Collegeboard goes over:</p>
 </h2>
 <p>Your homework for Algorithmic Efficiency is pretty simple.</p>
 <ol>
-<li>Use the 1st code below and graph it (Desmos, TI Inpire Cas, e.t.c) </li>
+<li>Use the 1st code below and graph it (Desmos, TI Inpire Cas, e.t.c), change the x value only!</li>
 <li>Label the number of loops done as x and the time (microseconds) to find the index as y</li>
 <li>Connect the points </li>
 <li>Do the same thing with the 2nd code</li>
@@ -326,18 +342,23 @@ There are two types of decision problems that Collegeboard goes over:</p>
 <span class="k">def</span> <span class="nf">linear_search</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
     <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span> <span class="c1"># records time (nanoseconds)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span> <span class="c1"># loops through the entire list </span>
+
         <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span> <span class="c1"># until the x value we are looking for is found</span>
             <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span> <span class="c1"># records time again</span>
             <span class="n">total_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">//</span> <span class="mi">1000</span> <span class="c1"># subtracts last recorded time and first recorded time</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"Found element after </span><span class="si">{}</span><span class="s2"> loops in </span><span class="si">{}</span><span class="s2"> microseconds"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">total_time</span><span class="p">))</span> <span class="c1"># prints the results</span>
             <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"Your number was found at"</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+            
     <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span> <span class="c1"># records the time again</span>
     <span class="n">total_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">//</span> <span class="mi">1000</span> <span class="c1"># subtracts last recorded time and first recorded time</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Element not found after </span><span class="si">{}</span><span class="s2"> loops in </span><span class="si">{}</span><span class="s2"> microseconds"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">),</span> <span class="n">total_time</span><span class="p">))</span> <span class="c1"># prints the results</span>
     <span class="k">return</span> <span class="s2">"Your number wasn't found :("</span>
 
+
 <span class="n">lst</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10001</span><span class="p">))</span> <span class="c1"># list with numbers 1-10000</span>
+
 <span class="n">x</span> <span class="o">=</span> <span class="mi">5000</span> <span class="c1"># replace with an integer between 1 and 10000 (I suggest big numbers like 500, 2000, so on)</span>
+
 <span class="n">linear_search</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="c1"># runs procedure</span>
 </pre></div>
 
@@ -367,22 +388,29 @@ There are two types of decision problems that Collegeboard goes over:</p>
     <span class="k">while</span> <span class="n">low</span><span class="o">&lt;=</span><span class="n">high</span><span class="p">:</span> <span class="c1"># Loop ran until mid is reached</span>
         <span class="n">num_loops</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># adds one loop each time process is repeated</span>
         <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> <span class="c1"># takes the lowest and highest possible numbers and divides by 2 and rounds to closest whole #</span>
+
         <span class="k">if</span> <span class="n">lt</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
             <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span> <span class="c1"># records time</span>
             <span class="n">total_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">//</span> <span class="mi">1000</span> <span class="c1"># time in microseconds</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"Element found after </span><span class="si">{}</span><span class="s2"> loops in </span><span class="si">{}</span><span class="s2"> microseconds"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num_loops</span><span class="p">,</span> <span class="n">total_time</span><span class="p">))</span> <span class="c1"># prints the results</span>
             <span class="k">return</span> <span class="n">mid</span> <span class="c1"># returns the index value</span>
+
         <span class="k">elif</span> <span class="n">lt</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">:</span> <span class="c1"># if mid was higher than x value, then sets new highest value as mid -1 </span>
             <span class="n">high</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span><span class="mi">1</span> 
+
         <span class="k">elif</span> <span class="n">lt</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">:</span>
             <span class="n">low</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1"># if mid was lower than x, sets the new low as mid + 1</span>
+            
     <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
     <span class="n">total_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">//</span> <span class="mi">1000</span> 
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Element not found after </span><span class="si">{}</span><span class="s2"> loops in </span><span class="si">{}</span><span class="s2"> microseconds"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num_loops</span><span class="p">,</span> <span class="n">total_time</span><span class="p">))</span> <span class="c1"># prints the results</span>
     <span class="k">return</span> <span class="s2">"Your number wasn't found :("</span>
 
+
 <span class="n">lt</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10001</span><span class="p">))</span> <span class="c1"># list with numbers 1-10000</span>
+
 <span class="n">x</span> <span class="o">=</span> <span class="mi">149</span> <span class="c1"># replace with an integer between 1 and 10000 (I suggest big numbers like 500, 2000, so on)</span>
+
 <span class="n">binary_search</span><span class="p">(</span><span class="n">lt</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="c1"># runs procedure</span>
 </pre></div>
 
