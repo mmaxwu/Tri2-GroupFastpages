@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Algorithmic Efficiency and Undecidable Problems" />
 <meta property="og:description" content="Algorithmic Efficiency and Undecidable Problems" />
-<link rel="canonical" href="https://mmaxwu.github.io/Tri2-GroupFastpages/lessons/2022/12/13/dd-lesson.html" />
-<meta property="og:url" content="https://mmaxwu.github.io/Tri2-GroupFastpages/lessons/2022/12/13/dd-lesson.html" />
+<link rel="canonical" href="https://mmaxwu.github.io/Tri2-GroupFastpages/lesson" />
+<meta property="og:url" content="https://mmaxwu.github.io/Tri2-GroupFastpages/lesson" />
 <meta property="og:site_name" content="Group Fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-12-13T00:00:00-06:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Unit 3 Sections 17-18" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-13T00:00:00-06:00","datePublished":"2022-12-13T00:00:00-06:00","description":"Algorithmic Efficiency and Undecidable Problems","headline":"Unit 3 Sections 17-18","mainEntityOfPage":{"@type":"WebPage","@id":"https://mmaxwu.github.io/Tri2-GroupFastpages/lessons/2022/12/13/dd-lesson.html"},"url":"https://mmaxwu.github.io/Tri2-GroupFastpages/lessons/2022/12/13/dd-lesson.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-13T00:00:00-06:00","datePublished":"2022-12-13T00:00:00-06:00","description":"Algorithmic Efficiency and Undecidable Problems","headline":"Unit 3 Sections 17-18","mainEntityOfPage":{"@type":"WebPage","@id":"https://mmaxwu.github.io/Tri2-GroupFastpages/lesson"},"url":"https://mmaxwu.github.io/Tri2-GroupFastpages/lesson"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Tri2-GroupFastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mmaxwu.github.io/Tri2-GroupFastpages/feed.xml" title="Group Fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Tri2-GroupFastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -110,6 +110,12 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h3"><a href="#An-Example-of-a-Forever-Running-Code">An Example of a Forever Running Code </a></li>
 <li class="toc-entry toc-h3"><a href="#The-Halting-Problem">The Halting Problem </a></li>
+<li class="toc-entry toc-h3"><a href="#Halting-Problem-Example:--In-order-to-understand-this,-suppose-that-an-algorithm-was-able-to-analyze-whether-a-code-halts-or-not.-Let's-call-this-algorithm-HaltChecker.--HaltChecker-analyzes-the-program,program-P,-and-its-input,input-I.-If-program-P-halts-with-input-I,-HaltChecker-returns-an-output-of-"halts".-If-program-P-doesn't-halt(runs-forever)-with-input-I,-HaltChecker-returns-an-output-of-"never".-For-example,-in-the-code-where-it-tests-if-variable-number,-the-__(code-runs-forever),-so-HaltChecker-returns-an-output-of-__("never").">Halting Problem Example:- In order to understand this, suppose that an algorithm was able to analyze whether a code halts or not. Let&#39;s call this algorithm HaltChecker.- HaltChecker analyzes the program,program P, and its input,input I. If program P halts with input I, HaltChecker returns an output of &quot;halts&quot;. If program P doesn&#39;t halt(runs forever) with input I, HaltChecker returns an output of &quot;never&quot;. For example, in the code where it tests if variable number, the __(code runs forever), so HaltChecker returns an output of __(&quot;never&quot;). </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#This-Diagram-Sums-up-the-Entire-Process-in-the-Bulleted-List:">This Diagram Sums up the Entire Process in the Bulleted List: </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#FAQs-and-Extra-Things-to-Notice">FAQs and Extra Things to Notice </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#3.17-Homework">3.17 Homework </a></li>
@@ -252,16 +258,10 @@ There are two types of decision problems that Collegeboard goes over:</p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote>
-<p>There is <strong><em>__</em></strong>(no way) to write an algorithm to analyze and determine whether this code can run forever or not.</p>
-<ul>
-<li>In order to understand this, suppose that an algorithm was able to analyze whether a code halts or not. Let's call this algorithm <code>HaltCheck</code>.</li>
-<li>In the above code, the code <strong><em>__</em></strong>(code runs forever), so <code>HaltCheck</code> returns an output of "no end".</li>
-<li>Then, we add another machine called <code>Opposite</code> which reverses <code>HaltCheck</code>'s output. So, if "no end" is the output of <code>HaltCheck</code>, then the output of <code>Opposite</code> is "halt". It's also the same the other way around; if <code>HaltCheck</code> has an output of "halt", then <code>Opposite</code> has an output of "no end".</li>
-<li>We combine these algorithms into one entire body of code.</li>
-<li><strong>Since <code>Opposite</code> is the algorithm at the end, hence giving the ultimate output, notice how it prints "no end" when in fact there is an end(As proved by <code>HaltCheck</code>), and how it also prints "halt" when there is in fact is no end to the code(Also proved by <code>HaltCheck</code>).</strong></li>
-</ul>
-</blockquote>
+<h3 id="The-Halting-Problem">
+<a class="anchor" href="#The-Halting-Problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Halting Problem<a class="anchor-link" href="#The-Halting-Problem"> </a>
+</h3>
+<p>The halting problem is an example of an <strong><em>__</em></strong>(undecidable problem). It states that it is not always possible to correctly determine whether a code halts or runs forever.</p>
 
 </div>
 </div>
@@ -269,11 +269,29 @@ There are two types of decision problems that Collegeboard goes over:</p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-Halting-Problem">
-<a class="anchor" href="#The-Halting-Problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Halting Problem<a class="anchor-link" href="#The-Halting-Problem"> </a>
+<blockquote>
+<p>There is <strong><em>__</em></strong>(no way) to write an algorithm to analyze and determine whether this code can run forever or not.</p>
+<h3 id="Halting-Problem-Example:--In-order-to-understand-this,-suppose-that-an-algorithm-was-able-to-analyze-whether-a-code-halts-or-not.-Let's-call-this-algorithm-HaltChecker.--HaltChecker-analyzes-the-program,program-P,-and-its-input,input-I.-If-program-P-halts-with-input-I,-HaltChecker-returns-an-output-of-&quot;halts&quot;.-If-program-P-doesn't-halt(runs-forever)-with-input-I,-HaltChecker-returns-an-output-of-&quot;never&quot;.-For-example,-in-the-code-where-it-tests-if-variable-number,-the-__(code-runs-forever),-so-HaltChecker-returns-an-output-of-__(&quot;never&quot;).">
+<a class="anchor" href="#Halting-Problem-Example:--In-order-to-understand-this,-suppose-that-an-algorithm-was-able-to-analyze-whether-a-code-halts-or-not.-Let's-call-this-algorithm-HaltChecker.--HaltChecker-analyzes-the-program,program-P,-and-its-input,input-I.-If-program-P-halts-with-input-I,-HaltChecker-returns-an-output-of-" halts aria-hidden="true"><span class="octicon octicon-link"></span></a>Halting Problem Example:- In order to understand this, suppose that an algorithm was able to analyze whether a code halts or not. Let's call this algorithm <code>HaltChecker</code>.- <code>HaltChecker</code> analyzes the program,<code>program P</code>, and its input,<code>input I</code>. If <code>program P</code> halts with <code>input I</code>, <code>HaltChecker</code> returns an output of "halts". If <code>program P</code> doesn't halt(runs forever) with <code>input I</code>, <code>HaltChecker</code> returns an output of "never". For example, in the code where it tests if variable <strong>number</strong>, the <strong><em>__</em></strong>(code runs forever), so <code>HaltChecker</code> returns an output of <strong><em>__</em></strong>("never").<a class="anchor-link" href="#Halting-Problem-Example:--In-order-to-understand-this,-suppose-that-an-algorithm-was-able-to-analyze-whether-a-code-halts-or-not.-Let's-call-this-algorithm-HaltChecker.--HaltChecker-analyzes-the-program,program-P,-and-its-input,input-I.-If-program-P-halts-with-input-I,-HaltChecker-returns-an-output-of-%22halts%22.-If-program-P-doesn't-halt(runs-forever)-with-input-I,-HaltChecker-returns-an-output-of-%22never%22.-For-example,-in-the-code-where-it-tests-if-variable-number,-the-__(code-runs-forever),-so-HaltChecker-returns-an-output-of-__(%22never%22)."> </a>
 </h3>
-<p>The halting problem is an example of an undecidable problem.</p>
-
+<ul>
+<li>Then, we add another algorithm called <code>Reverser</code> which reverses <code>HaltChecker</code>'s output. So, if "never" is the output of <code>HaltChecker</code>, then the output of <code>Reverser</code> is <strong><em>__</em></strong>("halts"). It's also the same the other way around: if <code>HaltChecker</code> has an output of "halts", then <code>Reverser</code> has an output of <strong><em>__</em></strong>("never").</li>
+<li>We combine these algorithms into one entire body of code.</li>
+<li><strong>Since <code>Reverser</code> is the algorithm at the end, hence giving the ultimate output, notice how it prints "never" when in fact there is an end(As proved by <code>HaltChecker</code>), and how it also prints "halts" when there is in fact is no end to the code(Also proved by <code>HaltChecker</code>). As a result, <code>HaltChecker</code> is inaccurate and this is an undecidable problem.</strong></li>
+</ul>
+</blockquote>
+<h4 id="This-Diagram-Sums-up-the-Entire-Process-in-the-Bulleted-List:">
+<a class="anchor" href="#This-Diagram-Sums-up-the-Entire-Process-in-the-Bulleted-List:" aria-hidden="true"><span class="octicon octicon-link"></span></a>This Diagram Sums up the Entire Process in the Bulleted List:<a class="anchor-link" href="#This-Diagram-Sums-up-the-Entire-Process-in-the-Bulleted-List:"> </a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="FAQs-and-Extra-Things-to-Notice">
+<a class="anchor" href="#FAQs-and-Extra-Things-to-Notice" aria-hidden="true"><span class="octicon octicon-link"></span></a>FAQs and Extra Things to Notice<a class="anchor-link" href="#FAQs-and-Extra-Things-to-Notice"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -393,7 +411,7 @@ There are two types of decision problems that Collegeboard goes over:</p>
 
 
 
-  </div><a class="u-url" href="/Tri2-GroupFastpages/lessons/2022/12/13/dd-lesson.html" hidden></a>
+  </div><a class="u-url" href="/Tri2-GroupFastpages/lesson" hidden></a>
 </article>
 
       </div>
